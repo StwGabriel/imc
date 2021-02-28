@@ -2,7 +2,7 @@
 
 Para visualizar o projeto faça o download dos arquivos ou execute `git clone https://github.com/StwGabriel/imc.git`
 
-![image](./img/IMC-preview.png)
+![image](./assets/img/IMC-preview.png)
 
 ## Descrição
 
