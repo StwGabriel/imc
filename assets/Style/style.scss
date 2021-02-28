@@ -40,10 +40,11 @@ button {
 
   background   : #fff;
   border-radius: 1rem;
+  box-shadow: 0 0 60px #0003;
 
-  width : min(95%, 65rem);
+  width: min(95%, 65rem);
 
-  margin: 2rem auto;
+  margin : 2rem auto;
   padding: 20px;
 }
 
@@ -77,6 +78,22 @@ button {
   }
 }
 
+span {
+
+  color          : #fff;
+  font-size      : 1.5rem;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+
+  margin: auto;
+
+  a {
+    color: #eefa;
+    margin-left: .5rem;
+  }
+}
+
 @media (max-width: 500px) {
 
   .block {
@@ -98,13 +115,18 @@ form button {
 }
 
 form input {
+
+  border: solid 2px var(--primary-color);
+
   font-size: 24px;
   height   : 50px;
   padding  : 0 20px;
 }
 
 form input:focus {
-  outline: 1px solid var(--primary-color);
+  outline: 2px solid var(--primary-color);
+  outline-offset: .3rem;
+  border: none;
 }
 
 form button {
