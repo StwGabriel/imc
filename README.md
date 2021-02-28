@@ -1,6 +1,7 @@
 # Calculadora de imc
 
-Para visualizar o projeto faça o download dos arquivos ou execute `git clone https://github.com/StwGabriel/imc.git`
+Para visualizar o projeto faça o download dos arquivos 
+ou execute `git clone https://github.com/StwGabriel/imc.git` em um terminal git bash ou outro de sua preferencia
 
 ![image](./assets/img/IMC-preview.png)
 
