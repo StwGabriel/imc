@@ -27,18 +27,23 @@ h3 {
   margin: 1rem 0;
 }
 
+input,
+button {
+  border-radius: 1rem;
+}
+
 .container {
-  max-width: 640px;
-  margin: 50px auto;
   background: #fff;
+  border-radius: 1rem;
+  width: min(95%, 65rem);
+  margin: 2rem auto;
   padding: 20px;
-  border-radius: 10px;
 }
 
 .block {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  font-size: clamp(1rem, 7vw, 2.5rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 1rem;
   width: 100%;
 }
@@ -54,6 +59,13 @@ h3 {
   text-align: left;
 }
 
+@media (max-width: 500px) {
+  .block {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0.5rem;
+  }
+}
 form input,
 form label,
 form button {
@@ -108,5 +120,4 @@ form button:hover {
 }
 .result .imcblock {
   margin: 2rem 0;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

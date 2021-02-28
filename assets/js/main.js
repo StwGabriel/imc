@@ -39,20 +39,7 @@ function IMC() {
                        };
                 };
                     
-                const value = `
-            
-            <div class="imcblock">
-            
-                <h4>Seu IMC é:</h4>
-                <p>${imcResult.toFixed(2)}</p>
-            </div>
-
-             <div class="imcblock">
-                <h4>Você está:</h4>
-                <p>${result()}</p>
-            </div>
-            
-            `
+                const value = `<div class="imcblock"><h4>Seu IMC é:</h4><p>${imcResult.toFixed(2)}</p></div<div class="imcblock"><h4>Você está:</h4><p>${result()}</p></div>`
 
                 finalResult.innerHTML = value
             }
