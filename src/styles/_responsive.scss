@@ -1,0 +1,26 @@
+@media (min-width:500px) {
+
+   main {
+
+      display: none;
+
+
+   }
+
+   body {
+      &::after {
+
+         content: 'VERSAO DESK AINDA EM DESENVOLVIMENTO';
+
+         color          : #000;
+         font-size      : 3rem;
+         display        : flex;
+         align-items    : center;
+         justify-content: center;
+
+         width : 100vw;
+         height: 100vh;
+
+      }
+   }
+}

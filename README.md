@@ -4,7 +4,7 @@ Para visualizar o projeto faça o download dos arquivos
 <br>
 ou execute `git clone https://github.com/StwGabriel/imc.git` em um terminal git bash ou outro de sua preferencia
 
-![image](./assets/img/IMC-preview.png)
+![image](./assets/IMC-preview.png)
 
 ## Descrição
 

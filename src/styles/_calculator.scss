@@ -1,0 +1,116 @@
+//
+#calculator {
+
+   display        : flex;
+   flex-direction : column;
+   align-items    : center;
+   justify-content: space-around;
+
+   width     : 100%;
+   height: clamp(60rem, 80%, 100rem);
+
+   padding: 2rem 0;
+
+   .fields {
+
+      width: 100%;
+
+      .calculatoirField {
+
+         background   : #fff;
+         border-radius: 1rem;
+         box-shadow   : 0 0 50px #0003;
+
+         display       : flex;
+         flex-direction: column;
+         align-items   : center;
+         height        : clamp(15rem, 50vw, 40rem);
+         width         : 90%;
+
+         padding: 1rem;
+         margin : 2rem auto;
+
+         p {
+
+            color      : var(--primary-color);
+            font-size  : 1.8rem;
+            font-weight: 600;
+
+            line-height: 1rem;
+         }
+
+         span {
+
+            font-size: 1.5rem !important;
+            font-size: var(--primary-color);
+
+            opacity: .5;
+         }
+
+         input {
+
+            border: none;
+            color : var(--primary-color);
+
+            font-size  : clamp(4rem, 20vw, 10rem);
+            font-weight: 500;
+
+            text-align: center;
+
+            width : clamp(6rem, 40vw, 15rem);
+            height: clamp(6rem, 40vw, 15rem);
+
+            &::placeholder {
+
+               color: var(--primary-color);
+            }
+         }
+
+         .buttonBox {
+
+            display: flex;
+
+            button {
+
+               background   : var(--white);
+               border-radius: 100%;
+               border       : solid 1px #11566655;
+
+               display        : flex;
+               align-items    : center;
+               justify-content: center;
+
+               height: clamp(3rem, 10vw, 6rem);
+               width : clamp(3rem, 10vw, 6rem);
+
+               margin: 0 .5rem;
+
+               img {
+
+                  width: 50%;
+
+               }
+            }
+         }
+      }
+   }
+
+   #calculatorButton {
+
+      background     : var(--primary-color);
+      border         : none;
+      border-radius  : 2rem;
+      backdrop-filter: blur(5px);
+      box-shadow     : 0 0 50px #0005;
+      color          : var(--white);
+      font-size      : 2rem;
+
+      width : 90%;
+      height: 6rem;
+
+      &:hover {
+
+         background: var(--primary-color-darker);
+      }
+   }
+}

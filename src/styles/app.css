@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,800&display=swap");
+:root {
+  --primary-color: #116072;
+  --primary-color-darker: #0a3f49;
+  --white: #fff;
+  --title-darker: #222;
+  font-family: "Open sans", sans-serif;
+  font-size: 62.5%;
+  background: #ededed;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  min-height: 620px;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 1rem 0;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 7rem;
+}
+header h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+#calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: clamp(60rem, 80%, 100rem);
+  padding: 2rem 0;
+}
+#calculator .fields {
+  width: 100%;
+}
+#calculator .fields .calculatoirField {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 50px #0003;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: clamp(15rem, 50vw, 40rem);
+  width: 90%;
+  padding: 1rem;
+  margin: 2rem auto;
+}
+#calculator .fields .calculatoirField p {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1rem;
+}
+#calculator .fields .calculatoirField span {
+  font-size: 1.5rem !important;
+  font-size: var(--primary-color);
+  opacity: 0.5;
+}
+#calculator .fields .calculatoirField input {
+  border: none;
+  color: var(--primary-color);
+  font-size: clamp(4rem, 20vw, 10rem);
+  font-weight: 500;
+  text-align: center;
+  width: clamp(6rem, 40vw, 15rem);
+  height: clamp(6rem, 40vw, 15rem);
+}
+#calculator .fields .calculatoirField input::-moz-placeholder {
+  color: var(--primary-color);
+}
+#calculator .fields .calculatoirField input:-ms-input-placeholder {
+  color: var(--primary-color);
+}
+#calculator .fields .calculatoirField input::placeholder {
+  color: var(--primary-color);
+}
+#calculator .fields .calculatoirField .buttonBox {
+  display: flex;
+}
+#calculator .fields .calculatoirField .buttonBox button {
+  background: var(--white);
+  border-radius: 100%;
+  border: solid 1px #11566655;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(3rem, 10vw, 6rem);
+  width: clamp(3rem, 10vw, 6rem);
+  margin: 0 0.5rem;
+}
+#calculator .fields .calculatoirField .buttonBox button img {
+  width: 50%;
+}
+#calculator #calculatorButton {
+  background: var(--primary-color);
+  border: none;
+  border-radius: 2rem;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  box-shadow: 0 0 50px #0005;
+  color: var(--white);
+  font-size: 2rem;
+  width: 90%;
+  height: 6rem;
+}
+#calculator #calculatorButton:hover {
+  background: var(--primary-color-darker);
+}
+
+.resultScreen {
+  background: #fff;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #db8b1233;
+  color: #dd6503;
+}
+.resultScreen header {
+  color: var(--primary-color-darker);
+  font-size: 1.3rem;
+  padding: 5rem;
+}
+.resultScreen .resultData {
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 700;
+  height: 20rem;
+  width: 20rem;
+  margin-top: 2rem;
+}
+.resultScreen .resultData p {
+  margin-bottom: 1rem;
+}
+.resultScreen .resultData span {
+  font-size: 2rem;
+}
+
+.onScreen {
+  display: flex !important;
+}
+
+@media (min-width: 500px) {
+  main {
+    display: none;
+  }
+
+  body::after {
+    content: "VERSAO DESK AINDA EM DESENVOLVIMENTO";
+    color: #000;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+@-webkit-keyframes ResultAnim {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes ResultAnim {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.resultAnim {
+  -webkit-animation-name: ResultAnim;
+          animation-name: ResultAnim;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+}/*# sourceMappingURL=app.css.map */
