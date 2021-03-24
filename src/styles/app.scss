@@ -1,16 +1,14 @@
 //
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,800&display=swap');
-
 :root {
   --primary-color       : #116072;
   --primary-color-darker: #0a3f49;
   --white               : #fff;
   --title-darker        : #222;
 
-  font-family: 'Open sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size  : 62.5%;
 
-  background: #ededed;
+  background: #F8F9FE;
 
   height: 100%;
 }
@@ -25,7 +23,7 @@
 body {
 
   height    : 100%;
-  min-height: 620px;
+  min-height: 400px;
   margin    : 0;
   padding   : 0;
 

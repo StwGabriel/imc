@@ -1,57 +1,124 @@
 //
 .resultScreen {
 
-   background    : #fff;
-   display       : none;
-   flex-direction: column;
-   align-items   : center;
+   background     : #F8F9FE;
+   border-radius  : 3rem;
+   display        : none;
+   flex-direction : column;
+   align-items    : center;
+   justify-content: space-between;
 
    position: fixed;
    top     : 0;
    right   : 0;
    bottom  : 0;
    left    : 0;
-   color: #db8b1233;
-   color: #dd6503;
 
    header {
 
-      color    : var(--primary-color-darker);
-      font-size: 1.3rem;
+      color     : var(--primary-color-darker);
+      font-size : 1.3rem;
+      text-align: center;
 
-      padding: 5rem;
+      padding: 2rem 0rem;
    }
 
-   .resultData {
+   .resultBoxMain {
 
-      border-radius: 100%;
+      overflow-y: scroll;
 
-      display        : flex;
-      flex-direction : column;
-      align-items    : center;
-      justify-content: center;
+      width : 95%;
+      height: 100%;
 
-      font-size  : 4rem;
-      font-weight: 700;
+      margin: 0 auto;
 
-      height: 20rem;
-      width : 20rem;
+      .resultBox {
 
-      margin-top: 2rem;
+         display        : flex;
+         flex-direction : column;
+         align-items    : center;
+         justify-content: space-between;
+         min-height     : 90%;
+         width          : 100%;
 
-      p {
-
-         margin-bottom: 1rem;
+         padding-bottom: 4rem;
       }
 
-      span {
+      .resultData {
 
-         font-size: 2rem;
+         border-radius: 100%;
+
+         display        : flex;
+         flex-direction : column;
+         align-items    : center;
+         justify-content: center;
+
+         font-size  : 4rem;
+         font-weight: 700;
+
+         height: 20rem;
+         width : 20rem;
+
+         margin-top: 2rem;
+
+         p {
+
+            margin-bottom: 1rem;
+         }
+
+         span {
+
+            font-size: 2rem;
+         }
       }
+
+      .imcData {
+
+         margin-top: 4rem;
+         width     : min(90%, 50rem);
+
+         table {
+
+            color      : var(--primary-color);
+            font-weight: 600;
+
+
+            height: clamp(15rem, 80vw, 30rem);
+            width : 100%;
+
+            margin: auto;
+
+            td+td {
+
+               text-align: right;
+            }
+         }
+
+         .tabelaTitle {
+
+            color      : var(--primary-color-darker);
+            font-size  : 2.4rem;
+            font-weight: 800;
+         }
+      }
+   }
+
+   .resultScreenClose {
+
+      background: transparent;
+      border    : none;
+
+      width : 25px;
+      height: 25px;
+
+      position: absolute;
+
+      right: 2rem;
+      top  : 2rem;
    }
 }
 
 .onScreen {
 
-   display: flex !important;
+   display: flex;
 }

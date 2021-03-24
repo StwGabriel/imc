@@ -1,4 +1,15 @@
 //
+
+const resultScreen = document.querySelector('.resultScreen');
+function openResultScreen() {
+
+   resultScreen.classList.add('onScreen');
+}
+function closeResultScreen() {
+
+   resultScreen.classList.remove('onScreen');
+}
+
 function imcCalculator() {
 
    console.log('run');
@@ -7,19 +18,19 @@ function imcCalculator() {
    const prevHeight = document.getElementById('height').value;
 
    const weight = Number(prevWeight);
-   const height = Number(prevHeight / 100);
+   const height = Number(prevHeight) / 100;
 
    const alert = document.querySelector('.alert')
 
-   if (typeof weight && height === false) {
+   if (weight && height === '0' || '') {
 
-      return alert.innerHTML = ` `;
+      return console.log('false');
    } else {
 
       console.log('its true');
 
       const imcResult = weight / (height * height);
-
+      console.log(weight, height);
       console.log(imcResult);
 
       function result() {
@@ -79,22 +90,22 @@ function imcCalculator() {
             `
          } else {
 
-            return 'ERROR <br> Por favor reinicie a aplicação'
-         }
+            return 'ERROR <br> Por favor digite um valor';
+         };
       };
 
       function finalResult() {
 
-         const resultScreen = document.querySelector('.resultScreen');
+
          const resultBubble = document.querySelector('.resultBubble');
          const resultData = result();
 
-         console.log(resultData);
-
          resultBubble.innerHTML = resultData;
-         resultScreen.classList.add('onScreen');
+
+         openResultScreen()
       }
 
       finalResult();
    }
+
 }

@@ -1,12 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700,800&display=swap");
 :root {
   --primary-color: #116072;
   --primary-color-darker: #0a3f49;
   --white: #fff;
   --title-darker: #222;
-  font-family: "Open sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 62.5%;
-  background: #ededed;
+  background: #F8F9FE;
   height: 100%;
 }
 
@@ -19,7 +18,7 @@
 
 body {
   height: 100%;
-  min-height: 620px;
+  min-height: 400px;
   margin: 0;
   padding: 0;
   font-size: 2rem;
@@ -37,18 +36,19 @@ main {
   height: 100%;
 }
 
-header {
+.header {
   background: var(--white);
+  box-shadow: 0 0 50px #0002;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 7rem;
 }
-header h1 {
+.header h1 {
   color: var(--primary-color);
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 2.2rem;
+  font-weight: 700;
 }
 
 #calculator {
@@ -57,8 +57,10 @@ header h1 {
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: clamp(60rem, 80%, 100rem);
-  padding: 2rem 0;
+  min-height: 40rem;
+  padding: clamp(1.6rem, 5vw, 20rem);
+  padding-right: 0;
+  padding-left: 0;
 }
 #calculator .fields {
   width: 100%;
@@ -70,56 +72,71 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: clamp(15rem, 50vw, 40rem);
-  width: 90%;
-  padding: 1rem;
+  height: clamp(15rem, 56vw, 25rem);
+  width: min(90%, 50rem);
   margin: 2rem auto;
 }
-#calculator .fields .calculatoirField p {
+#calculator .fields .calculatoirField .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 90%;
+  margin: auto;
+}
+#calculator .fields .calculatoirField .box p {
   color: var(--primary-color);
   font-size: 1.8rem;
   font-weight: 600;
-  line-height: 1rem;
+  line-height: 1.5rem;
 }
-#calculator .fields .calculatoirField span {
+#calculator .fields .calculatoirField .box span {
   font-size: 1.5rem !important;
   font-size: var(--primary-color);
+  line-height: 1.5rem;
   opacity: 0.5;
 }
-#calculator .fields .calculatoirField input {
+#calculator .fields .calculatoirField .box input {
   border: none;
   color: var(--primary-color);
-  font-size: clamp(4rem, 20vw, 10rem);
-  font-weight: 500;
+  font-size: clamp(4rem, 24vw, 10rem);
+  font-weight: 700;
   text-align: center;
-  width: clamp(6rem, 40vw, 15rem);
-  height: clamp(6rem, 40vw, 15rem);
+  width: clamp(6rem, 60vw, 20rem);
 }
-#calculator .fields .calculatoirField input::-moz-placeholder {
+#calculator .fields .calculatoirField .box input::-moz-placeholder {
   color: var(--primary-color);
+  text-shadow: 0 0 10px #0003;
 }
-#calculator .fields .calculatoirField input:-ms-input-placeholder {
+#calculator .fields .calculatoirField .box input:-ms-input-placeholder {
   color: var(--primary-color);
+  text-shadow: 0 0 10px #0003;
 }
-#calculator .fields .calculatoirField input::placeholder {
+#calculator .fields .calculatoirField .box input::placeholder {
   color: var(--primary-color);
+  text-shadow: 0 0 10px #0003;
 }
-#calculator .fields .calculatoirField .buttonBox {
+#calculator .fields .calculatoirField .box .buttonBox {
   display: flex;
 }
-#calculator .fields .calculatoirField .buttonBox button {
+#calculator .fields .calculatoirField .box .buttonBox button {
   background: var(--white);
   border-radius: 100%;
-  border: solid 1px #11566655;
+  border: solid 2px #11566620;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: clamp(3rem, 10vw, 6rem);
-  width: clamp(3rem, 10vw, 6rem);
+  height: clamp(3rem, 10vw, 4rem);
+  width: clamp(3rem, 10vw, 4rem);
   margin: 0 0.5rem;
 }
-#calculator .fields .calculatoirField .buttonBox button img {
+#calculator .fields .calculatoirField .box .buttonBox button img {
   width: 50%;
+  transition: width 0.4s;
+}
+#calculator .fields .calculatoirField .box .buttonBox button:hover img {
+  width: 40%;
 }
 #calculator #calculatorButton {
   background: var(--primary-color);
@@ -128,34 +145,52 @@ header h1 {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   box-shadow: 0 0 50px #0005;
+  cursor: pointer;
   color: var(--white);
   font-size: 2rem;
-  width: 90%;
-  height: 6rem;
+  width: min(90%, 50rem);
+  padding: 2rem 0;
+  transition: background 0.4s;
 }
 #calculator #calculatorButton:hover {
   background: var(--primary-color-darker);
 }
 
 .resultScreen {
-  background: #fff;
+  background: #F8F9FE;
+  border-radius: 3rem;
   display: none;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  color: #db8b1233;
-  color: #dd6503;
 }
 .resultScreen header {
   color: var(--primary-color-darker);
   font-size: 1.3rem;
-  padding: 5rem;
+  text-align: center;
+  padding: 2rem 0rem;
 }
-.resultScreen .resultData {
+.resultScreen .resultBoxMain {
+  overflow-y: scroll;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+}
+.resultScreen .resultBoxMain .resultBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90%;
+  width: 100%;
+  padding-bottom: 4rem;
+}
+.resultScreen .resultBoxMain .resultData {
   border-radius: 100%;
   display: flex;
   flex-direction: column;
@@ -167,33 +202,45 @@ header h1 {
   width: 20rem;
   margin-top: 2rem;
 }
-.resultScreen .resultData p {
+.resultScreen .resultBoxMain .resultData p {
   margin-bottom: 1rem;
 }
-.resultScreen .resultData span {
+.resultScreen .resultBoxMain .resultData span {
   font-size: 2rem;
+}
+.resultScreen .resultBoxMain .imcData {
+  margin-top: 4rem;
+  width: min(90%, 50rem);
+}
+.resultScreen .resultBoxMain .imcData table {
+  color: var(--primary-color);
+  font-weight: 600;
+  height: clamp(15rem, 80vw, 30rem);
+  width: 100%;
+  margin: auto;
+}
+.resultScreen .resultBoxMain .imcData table td + td {
+  text-align: right;
+}
+.resultScreen .resultBoxMain .imcData .tabelaTitle {
+  color: var(--primary-color-darker);
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+.resultScreen .resultScreenClose {
+  background: transparent;
+  border: none;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
 }
 
 .onScreen {
-  display: flex !important;
+  display: flex;
 }
 
-@media (min-width: 500px) {
-  main {
-    display: none;
-  }
-
-  body::after {
-    content: "VERSAO DESK AINDA EM DESENVOLVIMENTO";
-    color: #000;
-    font-size: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-  }
-}
 @-webkit-keyframes ResultAnim {
   from {
     transform: translateY(100vh);
@@ -202,6 +249,7 @@ header h1 {
     transform: translateY(0);
   }
 }
+
 @keyframes ResultAnim {
   from {
     transform: translateY(100vh);

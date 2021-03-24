@@ -6,10 +6,12 @@
    align-items    : center;
    justify-content: space-around;
 
-   width     : 100%;
-   height: clamp(60rem, 80%, 100rem);
+   width : 100%;
+   min-height: 40rem;
 
-   padding: 2rem 0;
+   padding: clamp(1.6rem, 5vw, 20rem);
+   padding-right: 0;
+   padding-left: 0;
 
    .fields {
 
@@ -24,74 +26,100 @@
          display       : flex;
          flex-direction: column;
          align-items   : center;
-         height        : clamp(15rem, 50vw, 40rem);
-         width         : 90%;
+         height        : clamp(15rem, 56vw, 25rem);
+         width         : min(90%, 50rem);
 
-         padding: 1rem;
          margin : 2rem auto;
 
-         p {
-
-            color      : var(--primary-color);
-            font-size  : 1.8rem;
-            font-weight: 600;
-
-            line-height: 1rem;
-         }
-
-         span {
-
-            font-size: 1.5rem !important;
-            font-size: var(--primary-color);
-
-            opacity: .5;
-         }
-
-         input {
-
-            border: none;
-            color : var(--primary-color);
-
-            font-size  : clamp(4rem, 20vw, 10rem);
-            font-weight: 500;
-
-            text-align: center;
-
-            width : clamp(6rem, 40vw, 15rem);
-            height: clamp(6rem, 40vw, 15rem);
-
-            &::placeholder {
-
-               color: var(--primary-color);
-            }
-         }
-
-         .buttonBox {
+         .box {
 
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
 
-            button {
+            height: 90%;
 
-               background   : var(--white);
-               border-radius: 100%;
-               border       : solid 1px #11566655;
+            margin: auto;
 
-               display        : flex;
-               align-items    : center;
-               justify-content: center;
 
-               height: clamp(3rem, 10vw, 6rem);
-               width : clamp(3rem, 10vw, 6rem);
+            p {
 
-               margin: 0 .5rem;
+               color      : var(--primary-color);
+               font-size  : 1.8rem;
+               font-weight: 600;
 
-               img {
+               line-height: 1.5rem;
+            }
 
-                  width: 50%;
+            span {
 
+               font-size  : 1.5rem !important;
+               font-size  : var(--primary-color);
+               line-height: 1.5rem;
+
+               opacity: .5;
+            }
+
+            input {
+
+               border: none;
+               color : var(--primary-color);
+
+               font-size  : clamp(4rem, 24vw, 10rem);
+               font-weight: 700;
+
+               text-align: center;
+
+               width: clamp(6rem, 60vw, 20rem);
+
+               &::placeholder {
+
+                  color      : var(--primary-color);
+                  text-shadow: 0 0 10px #0003;
+               }
+            }
+
+            .buttonBox {
+
+               display: flex;
+
+               button {
+
+                  background   : var(--white);
+                  border-radius: 100%;
+                  border       : solid 2px #11566620;
+
+                  cursor: pointer;
+
+                  display        : flex;
+                  align-items    : center;
+                  justify-content: center;
+
+                  height: clamp(3rem, 10vw, 4rem);
+                  width : clamp(3rem, 10vw, 4rem);
+
+                  margin: 0 .5rem;
+
+
+                  img {
+
+                     width     : 50%;
+                     transition: width .4s;
+                  }
+
+                  &:hover {
+
+                     img {
+
+                        width: 40%;
+                     }
+                  }
                }
             }
          }
+
+
       }
    }
 
@@ -102,11 +130,16 @@
       border-radius  : 2rem;
       backdrop-filter: blur(5px);
       box-shadow     : 0 0 50px #0005;
-      color          : var(--white);
-      font-size      : 2rem;
 
-      width : 90%;
-      height: 6rem;
+      cursor: pointer;
+
+      color    : var(--white);
+      font-size: 2rem;
+
+      width : min(90%, 50rem);
+      padding: 2rem 0;
+
+      transition: background .4s;
 
       &:hover {
 

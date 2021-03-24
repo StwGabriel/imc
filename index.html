@@ -6,41 +6,48 @@
   <link rel="stylesheet" href="./src/styles/app.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <title>Calculadora IMC Simples</title>
 
 </head>
 
 <body>
   <main id="main">
-    <header>
+    <header class="header">
 
-      <h1>Calculadora IMC</h1>
+      <h1>CALCULADORA IMC</h1>
     </header>
     <section id="calculator">
       <div class="fields">
         <div class="calculatoirField">
+          <div class="box">
 
-          <p>Peso</p>
-          <span>kg</span>
-          <input placeholder="00" type="number" id="weight">
+            <p>Peso</p>
+            <span>kg</span>
+            <input placeholder="00" type="number" id="weight">
 
-          <div class="buttonBox">
+            <div class="buttonBox">
 
-            <button onclick="Buttons.decreaseWeight()"><img src="./assets/minus.svg"></button>
-            <button onclick="Buttons.increaseWeight()"><img src="./assets/plus.svg"></button>
+              <button onclick="Buttons.decreaseWeight()"><img src="./assets/minus.svg"></button>
+              <button onclick="Buttons.increaseWeight()"><img src="./assets/plus.svg"></button>
+            </div>
           </div>
         </div>
 
         <div class="calculatoirField">
 
-          <p>Altura</p>
-          <span>cm</span>
-          <input placeholder="00" type="number" id="height">
+          <div class="box">
+            <p>Altura</p>
+            <span>cm</span>
+            <input placeholder="00" type="number" id="height">
 
-          <div class="buttonBox">
+            <div class="buttonBox">
 
-            <button onclick="Buttons.decreaseHeight()"><img src="./assets/minus.svg"></button>
-            <button onclick="Buttons.increaseHeight()"><img src="./assets/plus.svg"></button>
+              <button onclick="Buttons.decreaseHeight()"><img src="./assets/minus.svg"></button>
+              <button onclick="Buttons.increaseHeight()"><img src="./assets/plus.svg"></button>
+            </div>
           </div>
         </div>
       </div>
@@ -48,19 +55,55 @@
       <button class="" onclick="imcCalculator()" id="calculatorButton">Calcular</button>
     </section>
   </main>
+
   <div class="alert"></div>
+
   <div id="" class="resultScreen resultAnim">
+    <div class="resultBoxMain">
+      <button onclick="closeResultScreen()" class="resultScreenClose"><img src="./assets/close.svg"></button>
+      <header>
+        <h2>Resultado Do Seu IMC</h2>
+      </header>
 
-    <header>
-      <h2>O Resultado Do Seu IMC</h2>
-    </header>
+      <div class="resultBox">
+        <div class="resultBubble"></div>
 
-    <div class="resultBubble"> </div>
+        <div class="imcData">
+          <table class='imcTable'>
+            <span class="tabelaTitle">Tabela IMC :</span>
+            <tbody>
+              <tr>
+                <td>Abaixo do peso</td>
+                <td>&lt; 18,5</td>
+              </tr>
+              <tr>
+                <td>Normal</td>
+                <td>18,5 - 25</td>
+              </tr>
+              <tr>
+                <td>Acima do peso</td>
+                <td>25 - 30</td>
+              </tr>
+              <tr>
+                <td>Obesidade 1</td>
+                <td>30 - 35</td>
+              </tr>
+              <tr>
+                <td>Obesidade 2</td>
+                <td>35 - 40</td>
+              </tr>
+              <tr>
+                <td>Obesidade 3</td>
+                <td> &gt; 40 </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-    <div class="imcData">
-
+      </div>
     </div>
   </div>
+
   <script src="./src/js/calculator.js"></script>
   <script src="./src/js/calculatorButtons.js"></script>
 </body>
