@@ -14,63 +14,134 @@
 </head>
 
 <body>
+
   <main id="main">
+
     <header class="header">
 
       <h1>CALCULADORA IMC</h1>
     </header>
-    <section id="calculator">
-      <div class="fields">
-        <div class="calculatoirField">
-          <div class="box">
 
-            <p>Peso</p>
-            <span>kg</span>
-            <input placeholder="00" type="number" id="weight">
+    <div class="gridBox">
 
-            <div class="buttonBox">
+      <section id="calculator">
+        <form class="calculatorContent">
 
-              <button onclick="Buttons.decreaseWeight()"><img src="./assets/minus.svg"></button>
-              <button onclick="Buttons.increaseWeight()"><img src="./assets/plus.svg"></button>
+          <field class="fields">
+            <div class="calculatoirField">
+              <div class="box">
+
+                <p>Peso</p>
+                <span>kg</span>
+                <input placeholder="00" type="number" id="weight">
+
+                <div class="buttonBox">
+
+                  <button type="button" onclick="Buttons.decreaseWeight()"><img src="./assets/minus.svg"></button>
+                  <button type="button" onclick="Buttons.increaseWeight()"><img src="./assets/plus.svg"></button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
-        <div class="calculatoirField">
+            <div class="calculatoirField">
 
-          <div class="box">
-            <p>Altura</p>
-            <span>cm</span>
-            <input placeholder="00" type="number" id="height">
+              <div class="box">
+                <p>Altura</p>
+                <span>cm</span>
+                <input placeholder="00" type="number" id="height">
 
-            <div class="buttonBox">
+                <div class="buttonBox">
 
-              <button onclick="Buttons.decreaseHeight()"><img src="./assets/minus.svg"></button>
-              <button onclick="Buttons.increaseHeight()"><img src="./assets/plus.svg"></button>
+                  <button type="button" onclick="Buttons.decreaseHeight()"><img src="./assets/minus.svg"></button>
+                  <button type="button" onclick="Buttons.increaseHeight()"><img src="./assets/plus.svg"></button>
+                </div>
+              </div>
             </div>
+          </field>
+
+          <button onclick="window.imcCalculator(width); formPrevent(event);" id="calculatorButton">Calcular</button>
+
+        </form>
+      </section>
+
+      <div class="resultAlt">
+        <div class="resultDesk">
+
+          <div class="imcData">
+
+            <div id="resultDeskContainer">
+
+              <div class="resultData resultAnim" style='background: #aaa3;color: #555;'>
+                <span>calcule para ver o resuldato</span>
+              </div>
+
+            </div>
+
+            <div class="imcTable">
+
+              <span class="tabelaTitle">Tabela IMC :</span>
+
+              <table>
+
+                <tbody>
+                  <tr>
+                    <td>Abaixo do peso</td>
+                    <td>&lt; 18,5</td>
+                  </tr>
+                  <tr>
+                    <td>Normal</td>
+                    <td>18,5 - 25</td>
+                  </tr>
+                  <tr>
+                    <td>Acima do peso</td>
+                    <td>25 - 30</td>
+                  </tr>
+                  <tr>
+                    <td>Obesidade 1</td>
+                    <td>30 - 35</td>
+                  </tr>
+                  <tr>
+                    <td>Obesidade 2</td>
+                    <td>35 - 40</td>
+                  </tr>
+                  <tr>
+                    <td>Obesidade 3</td>
+                    <td> &gt; 40 </td>
+                  </tr>
+                </tbody>
+
+              </table>
+
+            </div>
+
           </div>
+
         </div>
       </div>
 
-      <button class="" onclick="imcCalculator()" id="calculatorButton">Calcular</button>
-    </section>
+    </div>
   </main>
 
-  <div class="alert"></div>
-
   <div id="" class="resultScreen resultAnim">
+
     <div class="resultBoxMain">
-      <button onclick="closeResultScreen()" class="resultScreenClose"><img src="./assets/close.svg"></button>
+
+      <button onclick="ResultScreen.closeResultScreen()" class="resultScreenClose"><img
+          src="./assets/close.svg"></button>
+
       <header>
         <h2>Resultado Do Seu IMC</h2>
       </header>
 
       <div class="resultBox">
+
         <div class="resultBubble"></div>
 
         <div class="imcData">
           <table class='imcTable'>
+
             <span class="tabelaTitle">Tabela IMC :</span>
+
             <tbody>
               <tr>
                 <td>Abaixo do peso</td>
@@ -97,13 +168,18 @@
                 <td> &gt; 40 </td>
               </tr>
             </tbody>
+
           </table>
         </div>
 
       </div>
+
     </div>
+
   </div>
 
+  <script src="./src/js/resultScreen.js"></script>
+  <script src="./src/js/formPrevent.js"></script>
   <script src="./src/js/calculator.js"></script>
   <script src="./src/js/calculatorButtons.js"></script>
 </body>

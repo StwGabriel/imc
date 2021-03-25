@@ -30,76 +30,27 @@
       width : 95%;
       height: 100%;
 
-      margin: 0 auto;
-
       .resultBox {
 
          display        : flex;
          flex-direction : column;
          align-items    : center;
          justify-content: space-between;
-         min-height     : 90%;
-         width          : 100%;
+
+         flex: 1;
+
+         height: 100%;
+         width : 100%;
 
          padding-bottom: 4rem;
-      }
 
-      .resultData {
-
-         border-radius: 100%;
-
-         display        : flex;
-         flex-direction : column;
-         align-items    : center;
-         justify-content: center;
-
-         font-size  : 4rem;
-         font-weight: 700;
-
-         height: 20rem;
-         width : 20rem;
-
-         margin-top: 2rem;
-
-         p {
-
-            margin-bottom: 1rem;
-         }
-
-         span {
-
-            font-size: 2rem;
-         }
-      }
-
-      .imcData {
-
-         margin-top: 4rem;
-         width     : min(90%, 50rem);
-
-         table {
-
-            color      : var(--primary-color);
-            font-weight: 600;
-
-
-            height: clamp(15rem, 80vw, 30rem);
-            width : 100%;
+         .resultBubble {
 
             margin: auto;
-
-            td+td {
-
-               text-align: right;
-            }
+            width : 100%;
          }
 
-         .tabelaTitle {
-
-            color      : var(--primary-color-darker);
-            font-size  : 2.4rem;
-            font-weight: 800;
-         }
+         @import 'imcData';
       }
    }
 

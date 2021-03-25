@@ -1,0 +1,36 @@
+      .imcData {
+
+         display        : flex;
+         flex-direction : column;
+         justify-content: center;
+         align-items    : center;
+         margin-top     : 4rem;
+
+         width : min(90%, 50rem);
+         margin: auto;
+
+         table {
+
+            color      : var(--primary-color);
+            font-weight: 600;
+
+            height: clamp(15rem, 80vw, 30rem);
+            width : 100%;
+
+            margin-top: 2rem;
+
+            td+td {
+
+               text-align: right;
+            }
+         }
+
+         .tabelaTitle {
+
+            color      : var(--primary-color-darker);
+            font-size  : 2.4rem;
+            font-weight: 800;
+
+            width: 100%;
+         }
+      }

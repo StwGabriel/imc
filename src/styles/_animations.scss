@@ -1,8 +1,8 @@
-@keyframes ResultAnim {
+@keyframes ResultScreenAnim {
 
    from {
 
-      transform: translateY(100vh);
+      transform: translateY(50%);
    }
 
    to {
@@ -14,7 +14,7 @@
 
 .resultAnim {
 
-   animation-name     : ResultAnim;
+   animation-name     : ResultScreenAnim;
    animation-duration : .3s;
    animation-fill-mode: backwards;
 }
