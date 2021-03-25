@@ -1,4 +1,12 @@
 //
+
+
+.resultAlt {
+
+   height: 0;
+   width : 0;
+}
+
 #calculator {
 
    display        : flex;
@@ -6,8 +14,9 @@
    align-items    : center;
    justify-content: space-around;
 
+   min-height: 50rem;
+   height    : 100%;
    width     : 100%;
-   min-height: 40rem;
 
    padding      : clamp(1.6rem, 5vw, 20rem);
    padding-right: 0;
@@ -20,7 +29,6 @@
       align-items    : flex-end;
       justify-content: center;
 
-      height: 100%;
       width : 100%;
    }
 

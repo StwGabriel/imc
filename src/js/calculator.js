@@ -1,12 +1,14 @@
 //
 const width = window.matchMedia("(min-width: 768px)");
+
 width.matches ? document.querySelector('.header').classList.remove('startAnim') : '';
 
 function imcCalculator() {
 
    const weight = Number(document.getElementById('weight').value),
-      prevHeight = Number(document.getElementById('height').value);
-   const height = prevHeight / 100;
+      height = Number(document.getElementById('height').value.replace('.', '') / 100);
+
+   console.log(height);
 
    if (weight === 0 || height === 0) {
 
@@ -86,7 +88,7 @@ function imcCalculator() {
 
       function mobileResult() {
 
-         const ResultBubble = document.querySelector('.resultBubble');
+         const ResultBubble = document.getElementById('resultMobileContainer');
 
          ResultBubble.innerHTML = result();
          ResultScreen.openResultScreen();

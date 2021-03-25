@@ -1,31 +1,31 @@
  //     
-.resultData {
+ .resultData {
 
-         border-radius: 100%;
+    border-radius: 100%;
 
-         display        : flex;
-         flex-direction : column;
-         align-items    : center;
-         justify-content: center;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
 
-         font-size  : 4rem;
-         font-weight: 700;
-         text-align : center;
+    font-size  : clamp(3rem, 5vw, 4rem);
+    font-weight: 700;
+    text-align : center;
 
-         height: 20rem;
-         width : 20rem;
+    height: clamp(15rem, 50vw, 20rem);
+    width : clamp(15rem, 50vw, 20rem);
 
-         padding   : 1rem;
-         margin    : auto;
-         margin-top: 2rem;
+    padding   : 1rem;
+    margin    : auto;
+    margin-top: 2rem;
 
-         p {
+    p {
 
-            margin-bottom: 1rem;
-         }
+       margin-bottom: 1rem;
+    }
 
-         span {
+    span {
 
-            font-size: 2rem;
-         }
-      }
+       font-size: clamp(1.5rem, 5vw, 3rem);
+    }
+ }
