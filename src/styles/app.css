@@ -34,6 +34,8 @@ h3 {
 main {
   width: 100%;
   height: 100%;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .header {
@@ -44,6 +46,7 @@ main {
   justify-content: center;
   width: 100%;
   height: 7rem;
+  position: static;
 }
 .header h1 {
   color: var(--primary-color);
@@ -317,23 +320,30 @@ main {
     width: min(90%, 50rem);
     margin: 0 auto;
   }
-  .gridBox .resultAlt .resultDesk .imcData .imcTable {
+  .gridBox .resultAlt .resultDesk .imcData .imcData {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    width: min(90%, 50rem);
+    margin: auto;
+  }
+  .gridBox .resultAlt .resultDesk .imcData .imcData table {
     color: var(--primary-color);
     font-weight: 600;
-    height: auto;
+    height: clamp(15rem, 80vw, 30rem);
     width: 100%;
+    margin-top: 2rem;
   }
-  .gridBox .resultAlt .resultDesk .imcData .imcTable .tabelaTitle {
+  .gridBox .resultAlt .resultDesk .imcData .imcData table td + td {
+    text-align: right;
+  }
+  .gridBox .resultAlt .resultDesk .imcData .imcData .tabelaTitle {
     color: var(--primary-color-darker);
     font-size: 2.4rem;
     font-weight: 800;
-  }
-  .gridBox .resultAlt .resultDesk .imcData .imcTable table {
-    height: 25rem;
     width: 100%;
-  }
-  .gridBox .resultAlt .resultDesk .imcData .imcTable td + td {
-    text-align: right;
   }
 }
 @-webkit-keyframes ResultScreenAnim {
@@ -352,6 +362,45 @@ main {
     transform: translateY(0);
   }
 }
+@-webkit-keyframes Start {
+  from {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 100;
+  }
+  to {
+    height: 7rem;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+@keyframes Start {
+  from {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 100;
+  }
+  to {
+    height: 7rem;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+.startAnim {
+  -webkit-animation-name: Start;
+          animation-name: Start;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
 .resultAnim {
   -webkit-animation-name: ResultScreenAnim;
           animation-name: ResultScreenAnim;

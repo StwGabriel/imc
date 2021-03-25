@@ -1,6 +1,4 @@
 //
-
-
 .resultDesk {
 
    background   : #fff;
@@ -25,6 +23,6 @@
       width : min(90%, 50rem);
       margin: 0 auto;
 
-      @import 'imcData';
+      @import './imcData';
    }
 }

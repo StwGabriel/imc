@@ -42,12 +42,13 @@ main {
 
   width : 100%;
   height: 100%;
+
+  animation-delay: .2s;
 }
 
-@import 'header';
-@import 'calculator';
-@import 'resultData';
-
-@import 'resultOverlay';
-@import 'responsive/respnsive';
-@import 'animations';
+@import './header';
+@import './calculator';
+@import './resultData';
+@import './resultOverlay';
+@import './responsive/responsive';
+@import './animations'

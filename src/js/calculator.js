@@ -1,12 +1,12 @@
 //
 const width = window.matchMedia("(min-width: 768px)");
+width.matches ? document.querySelector('.header').classList.remove('startAnim') : '';
 
 function imcCalculator() {
 
-   const prevWeight = document.getElementById('weight').value,
-      prevHeight = document.getElementById('height').value;
-   const weight = Number(prevWeight),
-      height = Number(prevHeight) / 100;
+   const weight = Number(document.getElementById('weight').value),
+      prevHeight = Number(document.getElementById('height').value);
+   const height = prevHeight / 100;
 
    if (weight === 0 || height === 0) {
 
@@ -27,7 +27,7 @@ function imcCalculator() {
                   <span>Abaixo do peso</span>
                </div>
             `
-         } else if (imcResult >= 18.6 && imcResult <= 24.9) {
+         } else if (imcResult >= 18.5 && imcResult <= 24.9) {
             return `
                <div
                class=" resultAnim resultData"
@@ -82,8 +82,8 @@ function imcCalculator() {
                </div>
             `
          }
-
       };
+
       function mobileResult() {
 
          const ResultBubble = document.querySelector('.resultBubble');
@@ -91,6 +91,7 @@ function imcCalculator() {
          ResultBubble.innerHTML = result();
          ResultScreen.openResultScreen();
       };
+
       function deskResult() {
 
          const resultDeskBubble = document.getElementById('resultDeskContainer');
@@ -99,6 +100,7 @@ function imcCalculator() {
 
       if (width.matches) {
 
+         document.getElementById('main').classList.remove('ResultScreenAnim')
          deskResult()
       } else {
          mobileResult();

@@ -1,6 +1,6 @@
 # Calculadora de imc
 
-Para visualizar o projeto faça o download dos arquivos 
+Para visualizar os arquivos do projeto faça o download dos arquivos 
 <br>
 ou execute `git clone https://github.com/StwGabriel/imc.git` em um terminal git bash ou outro de sua preferencia
 
@@ -8,7 +8,7 @@ ou execute `git clone https://github.com/StwGabriel/imc.git` em um terminal git 
 
 ## Descrição
 
-Calculadora simples de IMC desenvolvida em HTML, CSS e JS
+Calculadora simples de IMC (Índice de Massa Corpórea) desenvolvida em HTML, CSS e JS.
 
 ## Social & Profissional
 

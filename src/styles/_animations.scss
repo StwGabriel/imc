@@ -12,6 +12,33 @@
 
 }
 
+@keyframes Start {
+
+   from {
+
+      position: absolute;
+      top     : 0;
+      left    : 0;
+
+      height : 100vh;
+      z-index: 100;
+   }
+
+   to {
+      height  : 7rem;
+      position: sticky;
+   }
+}
+
+
+.startAnim {
+
+   animation-name     : Start;
+   animation-duration : .4s;
+   animation-fill-mode: backwards;
+   animation-play-state: running;
+}
+
 .resultAnim {
 
    animation-name     : ResultScreenAnim;
