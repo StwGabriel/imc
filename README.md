@@ -4,7 +4,11 @@ Para visualizar os arquivos do projeto faça o download dos arquivos
 <br>
 ou execute `git clone https://github.com/StwGabriel/imc.git` em um terminal git bash ou outro de sua preferencia
 
+### Versão desktop
 ![Desk version](assets/imccalculator.gif)
+
+### Versão Mobile
+![Mobile version](assets/mobileimccalculator.gif)
 
 ## Descrição
 
