@@ -26,16 +26,16 @@
 
    to {
       height  : 7rem;
-      position: sticky;
+      position: static;
    }
 }
 
 
 .startAnim {
 
-   animation-name     : Start;
-   animation-duration : .4s;
-   animation-fill-mode: backwards;
+   animation-name      : Start;
+   animation-duration  : .4s;
+   animation-fill-mode : backwards;
    animation-play-state: running;
 }
 

@@ -17,9 +17,10 @@
 }
 
 body {
+  min-height: 55rem;
   height: 100%;
-  min-height: 400px;
-  margin: 0;
+  width: min(100%, 150rem);
+  margin: 0 auto;
   padding: 0;
   font-size: 2rem;
   line-height: 3rem;
@@ -33,7 +34,7 @@ h3 {
 
 main {
   width: 100%;
-  height: 100%;
+  height: min(90rem, 85%);
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
@@ -59,15 +60,18 @@ main {
   width: 0;
 }
 
+.gridBox {
+  height: 100%;
+}
+
 #calculator {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  min-height: 50rem;
   height: 100%;
   width: 100%;
-  padding: clamp(1.6rem, 5vw, 20rem);
+  padding: clamp(1rem, 5vw, 20rem);
   padding-right: 0;
   padding-left: 0;
 }
@@ -77,6 +81,7 @@ main {
   align-items: flex-end;
   justify-content: center;
   width: 100%;
+  height: 100%;
 }
 #calculator .fields {
   width: 100%;
@@ -88,9 +93,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: clamp(15rem, 56vw, 25rem);
   width: min(90%, 50rem);
   margin: 2rem auto;
+  padding: clamp(1rem, 2vw, 5rem);
 }
 #calculator .fields .calculatoirField .box {
   display: flex;
@@ -102,14 +107,12 @@ main {
 }
 #calculator .fields .calculatoirField .box p {
   color: var(--primary-color);
-  font-size: 1.8rem;
+  font-size: clamp(1.8rem, 5vw, 4rem);
   font-weight: 600;
-  line-height: 1.5rem;
 }
 #calculator .fields .calculatoirField .box span {
-  font-size: 1.5rem !important;
+  font-size: clamp(1.5rem, 3vw, 3rem) !important;
   font-size: var(--primary-color);
-  line-height: 1.5rem;
   opacity: 0.5;
 }
 #calculator .fields .calculatoirField .box input {
@@ -190,7 +193,7 @@ main {
   margin-bottom: 1rem;
 }
 .resultData span {
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 
 .resultScreen {
@@ -384,8 +387,7 @@ main {
   }
   to {
     height: 7rem;
-    position: -webkit-sticky;
-    position: sticky;
+    position: static;
   }
 }
 @keyframes Start {
@@ -398,8 +400,7 @@ main {
   }
   to {
     height: 7rem;
-    position: -webkit-sticky;
-    position: sticky;
+    position: static;
   }
 }
 .startAnim {
