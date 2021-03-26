@@ -22,9 +22,9 @@
 
 body {
 
-  min-height: 55rem;
+  min-height: 60rem;
   height    : 100%;
- 
+
   padding: 0;
 
   font-size  : 2rem;
@@ -40,10 +40,9 @@ h3 {
 
 main {
 
-  width : 100%;
-  height: min(90rem, 85%);
-
-  animation-delay: .2s;
+  width     : 100%;
+  min-height: 60rem;
+  height    : 90%;
 }
 
 @import './header';

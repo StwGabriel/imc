@@ -1,15 +1,23 @@
  ///////////////////////////////////
  @media (max-width:768px) {
 
+    .gridBox {
+
+       height: 100%;
+    }
+
     .resultAlt {
 
        display: none;
+       height : 0;
+       width  : 0;
     }
 
     .calculatorContent {
 
        height: 80vh;
     }
+
  }
 
  ///////////////////////////////////
@@ -19,10 +27,9 @@
 
        display              : grid;
        grid-template-columns: 1fr 1fr;
-       grid-template-rows   : 1fr;
        gap                  : clamp(4rem, 5vw, 8rem);
 
-       padding: 5rem 0;
+       padding-top: clamp(2rem, 2vw, 5rem);
 
        #calculator {
 
@@ -40,12 +47,8 @@
 
           .calculatoirField {
 
-             margin: 0 0 4rem 0;
-          }
-
-          #calculatorButton {
-
-             margin: 0;
+             margin       : 0;
+             margin-bottom: clamp(1rem, 2vw, 5rem);
           }
        }
 
@@ -55,7 +58,7 @@
 
           display        : flex;
           flex-direction : column;
-          justify-content: center;
+          justify-content: flex-start;
 
           height: 100%;
           width : 100%;

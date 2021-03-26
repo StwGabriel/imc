@@ -8,24 +8,23 @@
     align-items    : center;
     justify-content: center;
 
-    font-size  : clamp(3rem, 5vw, 4rem);
     font-weight: 700;
     text-align : center;
 
-    height: clamp(15rem, 50vw, 20rem);
-    width : clamp(15rem, 50vw, 20rem);
+    height: clamp(10rem, 50vw, 20rem);
+    width : clamp(10rem, 50vw, 20rem);
 
-    padding   : 1rem;
-    margin    : auto;
-    margin-top: 2rem;
+    padding      : 1rem;
+    margin-bottom: 4rem;
 
     p {
 
+       font-size    : clamp(1.5rem, 8vw, 4rem);
        margin-bottom: 1rem;
     }
 
     span {
 
-       font-size: clamp(1.5rem, 5vw, 2.5rem);
+       font-size: clamp(1rem, 4vw, 2rem);
     }
  }

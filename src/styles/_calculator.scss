@@ -1,26 +1,15 @@
-//
-.resultAlt {
-
-   height: 0;
-   width : 0;
-}
-
-.gridBox {
-
-   height: 100%;
-}
-
+////
 #calculator {
 
    display        : flex;
    flex-direction : column;
    align-items    : center;
-   justify-content: space-around;
+   justify-content: flex-start;
 
    height: 100%;
    width : 100%;
 
-   padding      : clamp(1rem, 5vw, 20rem);
+   padding      : clamp(1rem, 5vw, 5rem);
    padding-right: 0;
    padding-left : 0;
 
@@ -28,11 +17,10 @@
 
       display        : flex;
       flex-direction : column;
-      align-items    : flex-end;
-      justify-content: center;
+      align-items    : center;
+      justify-content: flex-end;
 
-      width : 100%;
-      height: 100%;
+      width: 100%;
    }
 
    .fields {
@@ -42,7 +30,7 @@
       .calculatoirField {
 
          background   : #fff;
-         border-radius: 1rem;
+         border-radius: 2rem;
          box-shadow   : 0 0 50px #0003;
 
          display       : flex;
@@ -51,7 +39,8 @@
 
          width: min(90%, 50rem);
 
-         margin : 2rem auto;
+
+         margin : clamp(2rem, 2vw, 5rem) auto;
          padding: clamp(1rem, 2vw, 5rem);
 
          .box {
@@ -61,7 +50,7 @@
             align-items    : center;
             justify-content: space-between;
 
-            height: 90%;
+            height: 100%;
 
             margin: auto;
 
@@ -69,15 +58,15 @@
             p {
 
                color      : var(--primary-color);
-               font-size  : clamp(1.8rem, 5vw, 4rem);
+               font-size  : clamp(1.5rem, 2vw, 4rem);
                font-weight: 600;
 
             }
 
             span {
 
-               font-size  : clamp(1.5rem, 3vw, 3rem) !important;
-               font-size  : var(--primary-color);
+               font-size: clamp(1.2rem, 2vw, 3rem) !important;
+               font-size: var(--primary-color);
 
 
                opacity: .5;
@@ -88,7 +77,7 @@
                border: none;
                color : var(--primary-color);
 
-               font-size  : clamp(4rem, 24vw, 10rem);
+               font-size  : clamp(2rem, 15vw, 10rem);
                font-weight: 700;
 
                text-align: center;
@@ -140,33 +129,37 @@
                }
             }
          }
-
-
       }
    }
 
-   #calculatorButton {
+   .buttomContainer {
 
-      background   : var(--primary-color);
-      border       : none;
-      border-radius: 2rem;
-      box-shadow   : 0 0 50px #0005;
+      width          : 100%;
+      display        : flex;
+      justify-content: flex-end;
 
-      cursor: pointer;
+      #calculatorButton {
 
-      color    : var(--white);
-      font-size: 2rem;
+         background   : var(--primary-color);
+         border       : none;
+         border-radius: 2rem;
+         box-shadow   : 0 0 50px #0005;
 
-      width: min(90%, 50rem);
+         cursor: pointer;
 
-      padding: 2rem 0;
-      margin : 0 auto;
+         color    : var(--white);
+         font-size: 2rem;
 
-      transition: background .4s;
+         width: min(90%, 50rem);
 
-      &:hover {
+         padding: 2rem 0;
 
-         background: var(--primary-color-darker);
+         transition: background .4s;
+
+         &:hover {
+
+            background: var(--primary-color-darker);
+         }
       }
    }
 }

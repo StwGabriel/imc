@@ -17,7 +17,7 @@
 }
 
 body {
-  min-height: 55rem;
+  min-height: 60rem;
   height: 100%;
   padding: 0;
   font-size: 2rem;
@@ -32,9 +32,8 @@ h3 {
 
 main {
   width: 100%;
-  height: min(90rem, 85%);
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  min-height: 60rem;
+  height: 90%;
 }
 
 .header {
@@ -53,46 +52,36 @@ main {
   font-weight: 700;
 }
 
-.resultAlt {
-  height: 0;
-  width: 0;
-}
-
-.gridBox {
-  height: 100%;
-}
-
 #calculator {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
   height: 100%;
   width: 100%;
-  padding: clamp(1rem, 5vw, 20rem);
+  padding: clamp(1rem, 5vw, 5rem);
   padding-right: 0;
   padding-left: 0;
 }
 #calculator .calculatorContent {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
   width: 100%;
-  height: 100%;
 }
 #calculator .fields {
   width: 100%;
 }
 #calculator .fields .calculatoirField {
   background: #fff;
-  border-radius: 1rem;
+  border-radius: 2rem;
   box-shadow: 0 0 50px #0003;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: min(90%, 50rem);
-  margin: 2rem auto;
+  margin: clamp(2rem, 2vw, 5rem) auto;
   padding: clamp(1rem, 2vw, 5rem);
 }
 #calculator .fields .calculatoirField .box {
@@ -100,23 +89,23 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 90%;
+  height: 100%;
   margin: auto;
 }
 #calculator .fields .calculatoirField .box p {
   color: var(--primary-color);
-  font-size: clamp(1.8rem, 5vw, 4rem);
+  font-size: clamp(1.5rem, 2vw, 4rem);
   font-weight: 600;
 }
 #calculator .fields .calculatoirField .box span {
-  font-size: clamp(1.5rem, 3vw, 3rem) !important;
+  font-size: clamp(1.2rem, 2vw, 3rem) !important;
   font-size: var(--primary-color);
   opacity: 0.5;
 }
 #calculator .fields .calculatoirField .box input {
   border: none;
   color: var(--primary-color);
-  font-size: clamp(4rem, 24vw, 10rem);
+  font-size: clamp(2rem, 15vw, 10rem);
   font-weight: 700;
   text-align: center;
   width: clamp(6rem, 60vw, 20rem);
@@ -155,7 +144,12 @@ main {
 #calculator .fields .calculatoirField .box .buttonBox button:hover img {
   width: 40%;
 }
-#calculator #calculatorButton {
+#calculator .buttomContainer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#calculator .buttomContainer #calculatorButton {
   background: var(--primary-color);
   border: none;
   border-radius: 2rem;
@@ -165,10 +159,9 @@ main {
   font-size: 2rem;
   width: min(90%, 50rem);
   padding: 2rem 0;
-  margin: 0 auto;
   transition: background 0.4s;
 }
-#calculator #calculatorButton:hover {
+#calculator .buttomContainer #calculatorButton:hover {
   background: var(--primary-color-darker);
 }
 
@@ -178,20 +171,19 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: clamp(3rem, 5vw, 4rem);
   font-weight: 700;
   text-align: center;
-  height: clamp(15rem, 50vw, 20rem);
-  width: clamp(15rem, 50vw, 20rem);
+  height: clamp(10rem, 50vw, 20rem);
+  width: clamp(10rem, 50vw, 20rem);
   padding: 1rem;
-  margin: auto;
-  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 .resultData p {
+  font-size: clamp(1.5rem, 8vw, 4rem);
   margin-bottom: 1rem;
 }
 .resultData span {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(1rem, 4vw, 2rem);
 }
 
 .resultScreen {
@@ -244,25 +236,23 @@ main {
 .resultScreen .resultBoxMain .resultBox .imcData .imcTable {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-around;
   width: 100%;
   height: 100%;
-  margin-top: 5rem;
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 .resultScreen .resultBoxMain .resultBox .imcData table {
   color: var(--primary-color);
   font-weight: 600;
   width: 100%;
   height: 100%;
-  margin-top: 2rem;
 }
 .resultScreen .resultBoxMain .resultBox .imcData table td + td {
   text-align: right;
 }
 .resultScreen .resultBoxMain .resultBox .imcData .tabelaTitle {
   color: var(--primary-color-darker);
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 800;
   width: 100%;
 }
@@ -281,8 +271,14 @@ main {
 }
 
 @media (max-width: 768px) {
+  .gridBox {
+    height: 100%;
+  }
+
   .resultAlt {
     display: none;
+    height: 0;
+    width: 0;
   }
 
   .calculatorContent {
@@ -293,9 +289,8 @@ main {
   .gridBox {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
     gap: clamp(4rem, 5vw, 8rem);
-    padding: 5rem 0;
+    padding-top: clamp(2rem, 2vw, 5rem);
   }
   .gridBox #calculator {
     height: 100%;
@@ -308,15 +303,13 @@ main {
     justify-content: center;
   }
   .gridBox #calculator .calculatoirField {
-    margin: 0 0 4rem 0;
-  }
-  .gridBox #calculator #calculatorButton {
     margin: 0;
+    margin-bottom: clamp(1rem, 2vw, 5rem);
   }
   .gridBox .resultAlt {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100%;
     width: 100%;
   }
@@ -324,11 +317,9 @@ main {
     background: #fff;
     border-radius: 2rem;
     box-shadow: 0 0 50px #0003;
-    display: flex;
-    flex-direction: column;
     height: 100%;
     width: min(90%, 50rem);
-    padding: 5rem 0;
+    padding: 2rem 4rem;
   }
   .gridBox .resultAlt .resultDesk .imcData {
     display: flex;
@@ -336,31 +327,28 @@ main {
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    width: min(90%, 50rem);
-    margin: 0 auto;
+    width: 100%;
   }
   .gridBox .resultAlt .resultDesk .imcTable {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-around;
     width: 100%;
     height: 100%;
-    margin-top: 5rem;
-    padding: 5rem 0;
+    padding: 2rem 0;
   }
   .gridBox .resultAlt .resultDesk table {
     color: var(--primary-color);
     font-weight: 600;
     width: 100%;
     height: 100%;
-    margin-top: 2rem;
   }
   .gridBox .resultAlt .resultDesk table td + td {
     text-align: right;
   }
   .gridBox .resultAlt .resultDesk .tabelaTitle {
     color: var(--primary-color-darker);
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: 800;
     width: 100%;
   }

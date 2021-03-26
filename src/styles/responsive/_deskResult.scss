@@ -5,12 +5,10 @@
    border-radius: 2rem;
    box-shadow   : 0 0 50px #0003;
 
-   display       : flex;
-   flex-direction: column;
-
    height : 100%;
    width  : min(90%, 50rem);
-   padding: 5rem 0;
+   padding: 2rem 4rem;
+
 
    .imcData {
 
@@ -20,8 +18,7 @@
       justify-content: space-between;
 
       height: 100%;
-      width : min(90%, 50rem);
-      margin: 0 auto;
+      width : 100%;
 
    }
 
