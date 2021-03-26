@@ -36,6 +36,8 @@ main {
   min-height: 60rem;
   height    : 90vh;
   width     : min(100vw, 192rem);
+
+  margin: 0 auto;
 }
 
 @import './header';
