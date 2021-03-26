@@ -30,15 +30,16 @@
 
          background   : #fff;
          border-radius: 2rem;
-         box-shadow   : 0 0 50px #0003;
+         box-shadow   : 0 0 5rem #0003;
 
          display       : flex;
          flex-direction: column;
 
-         width: min(90%, 50rem);
+         width    : 90%;
+         max-width: 50rem;
 
-         margin : clamp(2rem, 2vw, 5rem) auto;
-         padding: clamp(1rem, 2vw, 5rem);
+         margin : 3rem auto;
+         padding: 3rem;
 
          .box {
 
@@ -55,14 +56,14 @@
             p {
 
                color      : var(--primary-color);
-               font-size  : clamp(1.5rem, 2vw, 4rem);
+               font-size  : 2.5 rem;
                font-weight: 600;
 
             }
 
             span {
 
-               font-size: clamp(1.2rem, 2vw, 3rem) !important;
+               font-size: 1.8rem !important;
                font-size: var(--primary-color);
 
 
@@ -74,17 +75,17 @@
                border: none;
                color : var(--primary-color);
 
-               font-size  : clamp(2rem, 15vw, 10rem);
+               font-size  : 8rem;
                font-weight: 700;
 
                text-align: center;
 
-               width: clamp(6rem, 60vw, 20rem);
+               width: 100%;
 
                &::placeholder {
 
                   color      : var(--primary-color);
-                  text-shadow: 0 0 10px #0003;
+                  text-shadow: 0 0 1rem #0003;
                }
             }
 
@@ -96,7 +97,7 @@
 
                   background   : var(--white);
                   border-radius: 100%;
-                  border       : solid 2px #11566620;
+                  border       : solid .2rem #11566620;
 
                   cursor: pointer;
 
@@ -104,8 +105,8 @@
                   align-items    : center;
                   justify-content: center;
 
-                  height: clamp(3rem, 10vw, 4rem);
-                  width : clamp(3rem, 10vw, 4rem);
+                  height: 4rem;
+                  width : 4rem;
 
                   margin: 0 .5rem;
 
@@ -140,14 +141,15 @@
          background   : var(--primary-color);
          border       : none;
          border-radius: 2rem;
-         box-shadow   : 0 0 50px #0005;
+         box-shadow   : 0 0 5rem #0005;
 
          cursor: pointer;
 
          color    : var(--white);
          font-size: 2rem;
 
-         width: min(90%, 50rem);
+         width    : 90%;
+         max-width: 50rem;
 
          padding: 2rem 0;
 

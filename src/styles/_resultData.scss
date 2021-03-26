@@ -11,20 +11,20 @@
     font-weight: 700;
     text-align : center;
 
-    height: clamp(10rem, 50vw, 20rem);
-    width : clamp(10rem, 50vw, 20rem);
+    height: 18rem;
+    width : 18rem;
 
     padding      : 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 
     p {
 
-       font-size    : clamp(1.5rem, 8vw, 4rem);
+       font-size    : 2.5rem;
        margin-bottom: 1rem;
     }
 
     span {
 
-       font-size: clamp(1rem, 4vw, 2rem);
+       font-size: 1.5rem;
     }
  }

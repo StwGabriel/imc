@@ -6,7 +6,7 @@
   font-family: "Inter", sans-serif;
   font-size: 62.5%;
   background: #F8F9FE;
-  height: 100%;
+  min-height: 100vh;
 }
 
 * {
@@ -18,7 +18,7 @@
 
 body {
   min-height: 60rem;
-  height: 100%;
+  height: 100vh;
   padding: 0;
   font-size: 2rem;
   line-height: 3rem;
@@ -26,14 +26,13 @@ body {
 
 main {
   min-height: 60rem;
-  height: 90%;
-  width: min(90%, 1920px);
-  margin: 0 auto;
+  height: 90vh;
+  width: min(100vw, 192rem);
 }
 
 .mainHeader {
   background: var(--white);
-  box-shadow: 0 0 50px #0002;
+  box-shadow: 0 0 5rem #0002;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,12 +69,13 @@ main {
 #calculator .fields .calculatoirField {
   background: #fff;
   border-radius: 2rem;
-  box-shadow: 0 0 50px #0003;
+  box-shadow: 0 0 5rem #0003;
   display: flex;
   flex-direction: column;
-  width: min(90%, 50rem);
-  margin: clamp(2rem, 2vw, 5rem) auto;
-  padding: clamp(1rem, 2vw, 5rem);
+  width: 90%;
+  max-width: 50rem;
+  margin: 3rem auto;
+  padding: 3rem;
 }
 #calculator .fields .calculatoirField .box {
   display: flex;
@@ -87,33 +87,33 @@ main {
 }
 #calculator .fields .calculatoirField .box p {
   color: var(--primary-color);
-  font-size: clamp(1.5rem, 2vw, 4rem);
+  font-size: 2.5 rem;
   font-weight: 600;
 }
 #calculator .fields .calculatoirField .box span {
-  font-size: clamp(1.2rem, 2vw, 3rem) !important;
+  font-size: 1.8rem !important;
   font-size: var(--primary-color);
   opacity: 0.5;
 }
 #calculator .fields .calculatoirField .box input {
   border: none;
   color: var(--primary-color);
-  font-size: clamp(2rem, 15vw, 10rem);
+  font-size: 8rem;
   font-weight: 700;
   text-align: center;
-  width: clamp(6rem, 60vw, 20rem);
+  width: 100%;
 }
 #calculator .fields .calculatoirField .box input::-moz-placeholder {
   color: var(--primary-color);
-  text-shadow: 0 0 10px #0003;
+  text-shadow: 0 0 1rem #0003;
 }
 #calculator .fields .calculatoirField .box input:-ms-input-placeholder {
   color: var(--primary-color);
-  text-shadow: 0 0 10px #0003;
+  text-shadow: 0 0 1rem #0003;
 }
 #calculator .fields .calculatoirField .box input::placeholder {
   color: var(--primary-color);
-  text-shadow: 0 0 10px #0003;
+  text-shadow: 0 0 1rem #0003;
 }
 #calculator .fields .calculatoirField .box .buttonBox {
   display: flex;
@@ -121,13 +121,13 @@ main {
 #calculator .fields .calculatoirField .box .buttonBox button {
   background: var(--white);
   border-radius: 100%;
-  border: solid 2px #11566620;
+  border: solid 0.2rem #11566620;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: clamp(3rem, 10vw, 4rem);
-  width: clamp(3rem, 10vw, 4rem);
+  height: 4rem;
+  width: 4rem;
   margin: 0 0.5rem;
 }
 #calculator .fields .calculatoirField .box .buttonBox button img {
@@ -146,11 +146,12 @@ main {
   background: var(--primary-color);
   border: none;
   border-radius: 2rem;
-  box-shadow: 0 0 50px #0005;
+  box-shadow: 0 0 5rem #0005;
   cursor: pointer;
   color: var(--white);
   font-size: 2rem;
-  width: min(90%, 50rem);
+  width: 90%;
+  max-width: 50rem;
   padding: 2rem 0;
   transition: background 0.4s;
 }
@@ -166,17 +167,17 @@ main {
   justify-content: center;
   font-weight: 700;
   text-align: center;
-  height: clamp(10rem, 50vw, 20rem);
-  width: clamp(10rem, 50vw, 20rem);
+  height: 18rem;
+  width: 18rem;
   padding: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .resultData p {
-  font-size: clamp(1.5rem, 8vw, 4rem);
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 .resultData span {
-  font-size: clamp(1rem, 4vw, 2rem);
+  font-size: 1.5rem;
 }
 
 .resultScreen {
@@ -203,14 +204,15 @@ main {
   overflow-y: scroll;
   width: 100%;
   height: 100%;
-  padding: clamp(1rem, 5vw, 5rem);
+  padding: 3rem;
 }
 .resultScreen .resultBoxMain .resultBox {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: min(80rem, 90%);
+  min-height: 50rem;
+  height: 90%;
   width: 100%;
 }
 .resultScreen .resultBoxMain .resultBox .resultBubble {
@@ -223,7 +225,7 @@ main {
   align-items: center;
   justify-content: space-between;
   flex: 1;
-  min-height: 90%;
+  min-height: 100%;
   width: 100%;
 }
 .resultScreen .resultBoxMain .resultBox .imcData .imcTable {
@@ -233,6 +235,7 @@ main {
   width: 100%;
   height: 100%;
   padding: 2rem 0;
+  margin-top: 5rem;
 }
 .resultScreen .resultBoxMain .resultBox .imcData table {
   color: var(--primary-color);
@@ -252,8 +255,8 @@ main {
 .resultScreen .resultScreenClose {
   background: transparent;
   border: none;
-  width: 25px;
-  height: 25px;
+  width: 2.5rem;
+  height: 2.5rem;
   position: absolute;
   right: 2rem;
   top: 2rem;
@@ -263,32 +266,19 @@ main {
   display: flex;
 }
 
-@media (max-width: 768px) {
+@media only screen and (min-width: 1920px) {
+  :root {
+    font-size: 85.5%;
+  }
+}
+@media only screen and (min-width: 1600px) {
   :root {
     font-size: 62.5%;
   }
-
-  .gridBox {
-    height: 100%;
-  }
-
-  .resultAlt {
-    display: none;
-    height: 0;
-    width: 0;
-  }
-
-  .calculatorContent {
-    min-height: 80vh;
-  }
-  .calculatorContent input {
-    font-size: clamp(2rem, 10vw, 10rem);
-    width: clamp(6rem, 50vw, 20rem);
-  }
 }
-@media (min-width: 770px) {
+@media only screen and (min-width: 770px) {
   :root {
-    font-size: 55%;
+    font-size: 49%;
   }
 
   .mainHeader {
@@ -312,7 +302,7 @@ main {
   .gridBox .resultAlt .resultDesk {
     background: #fff;
     border-radius: 2rem;
-    box-shadow: 0 0 50px #0003;
+    box-shadow: 0 0 5rem #0003;
     height: 100%;
     width: min(90%, 50rem);
     padding: 2rem 4rem;
@@ -332,6 +322,7 @@ main {
     width: 100%;
     height: 100%;
     padding: 2rem 0;
+    margin-top: 5rem;
   }
   .gridBox .resultAlt .resultDesk table {
     color: var(--primary-color);
@@ -370,14 +361,32 @@ main {
     justify-content: flex-end;
   }
 }
-@media (min-width: 1400px) {
+@media only screen and (max-width: 768px) {
   :root {
     font-size: 62.5%;
   }
+
+  .gridBox {
+    height: 100%;
+  }
+
+  .resultAlt {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  .calculatorContent {
+    min-height: 80vh;
+  }
+  .calculatorContent input {
+    font-size: clamp(2rem, 10vw, 10rem);
+    width: clamp(6rem, 50vw, 20rem);
+  }
 }
-@media (min-width: 1920px) {
+@media only screen and (max-width: 400px) {
   :root {
-    font-size: 85.5%;
+    font-size: 48%;
   }
 }
 @-webkit-keyframes ResultScreenAnim {
