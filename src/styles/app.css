@@ -267,34 +267,6 @@ main {
   display: flex;
 }
 
-@media only screen and (max-width: 400px) {
-  :root {
-    font-size: 48%;
-  }
-}
-@media only screen and (max-width: 769px) {
-  :root {
-    font-size: 62.5%;
-  }
-
-  .gridBox {
-    height: 100%;
-  }
-
-  .resultAlt {
-    display: none;
-    height: 0;
-    width: 0;
-  }
-
-  .calculatorContent {
-    min-height: 80vh;
-  }
-  .calculatorContent input {
-    font-size: clamp(2rem, 10vw, 10rem);
-    width: clamp(6rem, 50vw, 20rem);
-  }
-}
 @media only screen and (min-width: 770px) {
   :root {
     font-size: 49%;
@@ -388,6 +360,34 @@ main {
 @media only screen and (min-width: 1920px) {
   :root {
     font-size: 85.5%;
+  }
+}
+@media only screen and (max-width: 769px) {
+  :root {
+    font-size: 62.5%;
+  }
+
+  .gridBox {
+    height: 100%;
+  }
+
+  .resultAlt {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  .calculatorContent {
+    min-height: 80vh;
+  }
+  .calculatorContent input {
+    font-size: clamp(2rem, 10vw, 10rem);
+    width: clamp(6rem, 50vw, 20rem);
+  }
+}
+@media only screen and (max-width: 400px) {
+  :root {
+    font-size: 45%;
   }
 }
 @-webkit-keyframes ResultScreenAnim {
