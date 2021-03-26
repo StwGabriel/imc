@@ -1,6 +1,11 @@
  ///////////////////////////////////
  @media (max-width:768px) {
 
+    :root {
+
+       font-size: 62.5%;
+    }
+
     .gridBox {
 
        height: 100%;
@@ -15,14 +20,32 @@
 
     .calculatorContent {
 
-       height: 80vh;
+       min-height: 80vh;
+
+       input {
+
+          font-size: clamp(2rem, 10vw, 10rem);
+
+          width: clamp(6rem, 50vw, 20rem);
+       }
     }
 
  }
-
  ///////////////////////////////////
  @media (min-width:770px) {
 
+    :root {
+
+       font-size: 55%;
+    }
+
+    ///////////////////////////////////
+    .mainHeader {
+
+       display: none;
+    }
+
+    ///////////////////////////////////
     .gridBox {
 
        display              : grid;
@@ -31,35 +54,8 @@
 
        padding-top: clamp(2rem, 2vw, 5rem);
 
-       #calculator {
 
-
-          height : 100%;
-          padding: 0;
-
-          .fields {
-
-             display        : flex;
-             flex-direction : column;
-             align-items    : flex-end;
-             justify-content: center;
-          }
-
-          .calculatoirField {
-
-             margin       : 0;
-             margin-bottom: clamp(1rem, 2vw, 5rem);
-          }
-
-          .buttomContainer {
-
-             justify-content: flex-end;
-          }
-       }
-
-
-
-       ///////////////////////////////////
+       margin: 0 auto;
 
        .resultAlt {
 
@@ -73,4 +69,43 @@
           @import 'deskResult';
        }
     }
+
+    ///////////////////////////////////
+    #calculator {
+
+       height : 100%;
+       padding: 0;
+
+       .fields {
+
+          display        : flex;
+          flex-direction : column;
+          align-items    : flex-end;
+          justify-content: center;
+
+          .calculatoirField {
+
+
+             padding: clamp(.5rem, 1.5vw, 5rem);
+             margin : 2rem 0;
+
+             input {
+
+                font-size: clamp(1rem, 5vw, 2rem);
+             }
+          }
+       }
+
+
+
+       .buttomContainer {
+
+          justify-content: flex-end;
+       }
+    }
  }
+ ///////////////////////////////////
+ @media (min-width: 1400px) { :root { font-size: 62.5%; } }
+ ///////////////////////////////////
+ @media (min-width: 1920px) { :root { font-size: 85.5%; } }
+    

@@ -31,18 +31,13 @@ body {
   line-height: 3rem;
 }
 
-h1,
-h2,
-h3 {
-
-  margin: 1rem 0;
-}
-
 main {
 
-  width     : 100%;
   min-height: 60rem;
   height    : 90%;
+  width     : min(90%, 1920px);
+
+  margin: 0 auto;
 }
 
 @import './header';
@@ -50,4 +45,4 @@ main {
 @import './resultData';
 @import './resultOverlay';
 @import './responsive/responsive';
-@import './animations'
+@import './animations';
