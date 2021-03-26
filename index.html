@@ -15,19 +15,20 @@
 
 <body>
 
-  <main id="main" class="ResultScreenAnim">
+  <main id="main">
 
-    <header class="header startAnim">
+    <header class="header">
 
       <h1>CALCULADORA IMC</h1>
     </header>
 
-    <div class="gridBox">
+    <div class="gridBox resultAnim">
 
       <section id="calculator">
         <form class="calculatorContent">
 
           <field class="fields">
+
             <div class="calculatoirField">
               <div class="box">
 
@@ -48,7 +49,7 @@
               <div class="box">
                 <p>Altura</p>
                 <span>cm</span>
-                <input placeholder="00" type="text" id="height">
+                <input placeholder="00" type="number" id="height">
 
                 <div class="buttonBox">
 
@@ -57,6 +58,7 @@
                 </div>
               </div>
             </div>
+
           </field>
 
           <button onclick="window.imcCalculator(width); formPrevent(event);" id="calculatorButton">Calcular</button>
@@ -72,7 +74,7 @@
             <div id="resultDeskContainer">
 
               <div class="resultData resultAnim" style='background: #aaa3;color: #555;'>
-                <span>calcule para ver o resuldato</span>
+                <span>calcule para ver o resultado</span>
               </div>
 
             </div>
@@ -141,9 +143,6 @@
           <div class="imcTable">
             <span class="tabelaTitle">Tabela IMC :</span>
             <table>
-
-
-
               <tbody>
                 <tr>
                   <td>Abaixo do peso</td>
@@ -170,11 +169,8 @@
                   <td> &gt; 40 </td>
                 </tr>
               </tbody>
-
             </table>
           </div>
-
-
 
         </div>
       </div>

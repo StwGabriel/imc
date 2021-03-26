@@ -80,7 +80,7 @@ function imcCalculator() {
 
             return `
                <div class="resultData resultAnim" style='background: #aaa3;color: #555;'>
-                  <span>calcule para ver o resuldato</span>
+                  <span>calcule para ver o resultado</span>
                </div>
             `
          }
