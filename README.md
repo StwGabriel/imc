@@ -15,6 +15,13 @@ ou execute `git clone https://github.com/StwGabriel/imc.git` em um terminal git 
 
 Calculadora simples de IMC (Índice de Massa Corpórea) desenvolvida em HTML, CSS e JS.
 
+### linguagens e ferramentas utilizadas
+
+![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![image](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![image](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![image](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+
 ## Social & Profissional
 
 <a href='https://www.instagram.com/stw_gabriel/'><img src='https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white'></img> </a>
