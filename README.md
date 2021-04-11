@@ -30,4 +30,4 @@ Calculadora simples de IMC (Índice de Massa Corpórea) desenvolvida em HTML, CS
 <a href='https://www.youtube.com/channel/UCQdFFC-ZOxK7hfsdq5qQ--g'><img src='https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white'></img> </a>
 <a href='mailto:gabbrielsilvactt@gmail.com?Subject=Vim%20Pelo%20GitHub%20/%20I%20came%20through%20GitHub'><img src='https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white'></img> </a>
 
-Link Rapido: https://cutt.ly/Bh8DJ03
+Link Rapido: https://bit.ly/Stw_Gabriel
